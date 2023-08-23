@@ -3,27 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>A-Frame で超簡単 AR</title>
+<title>Three.js test</title>
+
+
+
+
+<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 </head>
-<body style="margin:0px; overflow:hidden;">
-  <!-- A-Frame ライブラリの読み込み -->
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <!-- AR.js ライブラリの読み込み -->
-  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-  
-  <!-- A-Frame の VR空間に AR.js を紐づける（デバッグUIを非表示） -->
-  <a-scene embedded arjs="debugUIEnabled:false;">
- 
-    <!-- マーカーを登録（プリセットされている「hiro」マーカー） -->
-    <a-marker preset="hiro">
-      <!-- マーカーの場所に箱を置く（見やすいようにワイヤーフレーム表示） -->
-        <a-sphere position="0 0 0" radius="1.25" color="#EF2D5E"></a-sphere>
-    </a-marker>
- 
-    <!-- AR用のカメラを置く -->
-    <a-entity camera></a-entity>
- 
+<body>
+  <a-scene>
+    <a-sky   color="0x000000"   >    </a-sky>
+    
+    <a-image position="0 0 0"  
+    rotation="0 0 0" 
+    
+    src="https://raw.githubusercontent.com/ProjectCalen/ARimagedate/main/chrome.png" ></a-image>
+   
+    <!--
+    <a-box
+      color="#4488FF"
+      position="0 0 0"
+      rotation="0 0 0"
+      animation="property: rotation; to: 360 360 0; dur: 3600; easing: linear; loop: true"
+    >
+    </a-box>
+  -->
+
+    <a-camera  position="0 0 2">    </a-camera>
   </a-scene>
- 
 </body>
 </html>

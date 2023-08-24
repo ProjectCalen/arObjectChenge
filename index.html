@@ -10,7 +10,9 @@
 </head>
 
 <body>
-  <a-scene>
+ <a-scene webxr="requiredFeatures: hit-test,local-floor;
+                optionalFeatures: dom-overlay,unbounded;
+                overlayElement: #overlay;">
     <a-box
     width="1" height="1" depth="1"
 
